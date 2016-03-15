@@ -1,11 +1,12 @@
 # MakersBnBRails
 
-
+:white_check_mark:
 ```
 As a user
 So that I can find somewhere to stay
 I'd like to visit Makers-bnb.
 ```
+:construction:
 ```
 As a user
 So that I can have some one stay at my place
