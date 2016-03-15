@@ -33,7 +33,7 @@ feature 'a user can post a space' do
       click_button 'Create Space'
       within 'ul#spaces' do
         expect(page).to have_content 'Location: London'
-        expect(page).to have_selector("img")
+        expect(page.find('.space_thumb')['src']).to have_content 'Elephant.jpg'
       end
     end
   end
