@@ -12,6 +12,16 @@ As a user
 So that I can have some one stay at my place
 I'd like to post my place.
 ```
+:construction:
+```
+as a user,
+so i can properly advertise my space,
+i'd like to be able to  post an image of my space,
+
+as a user,
+so I can make a better decision where to stay,
+i'd like to be able to see an image of a space,
+```
 ```
 As a user
 So that I can list my place
