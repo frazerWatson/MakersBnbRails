@@ -12,7 +12,7 @@ As a user
 So that I can have some one stay at my place
 I'd like to post my place.
 ```
-:construction:
+:white_check_mark:
 ```
 as a user,
 so i can properly advertise my space,
