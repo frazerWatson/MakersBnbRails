@@ -1,8 +1,17 @@
-<h1>Spaces#index</h1>
+<h1>Welcome To MakersBnB</h1>
 <% if @spaces.any? %>
-  <% @spaces.each do |space| %>
-    <p><%= space.name %></p>
-  <% end %>
+  <ul id="spaces">
+    <% @spaces.each do |space| %>
+      <li>
+      <p><%= space.name %></p>
+      <p>Location: <%= space.location %></p>
+      <p>Details: <%= space.details %></p>
+      <p>Price Per Night: <%= space.price %></p>
+      <p>Available From: <%= space.available_from %></p>
+      <p>Available To: <%= space.available_to %></p>
+      </li>
+    <% end %>
+  </ul>
 <% else %>
   <p>no spaces yet...</p>
 <% end %>

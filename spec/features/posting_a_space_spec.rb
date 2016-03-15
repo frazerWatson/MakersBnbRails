@@ -29,7 +29,7 @@ feature 'a user can post a space' do
       fill_in 'Details', with: 'single bedroom with ensuite'
       fill_in 'Available from', with: Date.new(2016,03,15)
       fill_in 'Available to', with: Date.new(2016,03,15)
-      click_button 'Submit'
+      click_button 'Create Space'
       within 'ul#spaces' do
         expect(page).to have_content 'Location: London'
       end
