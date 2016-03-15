@@ -1,3 +1,9 @@
 <h1>Spaces#index</h1>
-<p>no spaces yet...</p>
+<% if @spaces.any? %>
+  <% @spaces.each do |space| %>
+    <p><%= space.name %></p>
+  <% end %>
+<% else %>
+  <p>no spaces yet...</p>
+<% end %>
 <%= link_to 'post a space' %>
