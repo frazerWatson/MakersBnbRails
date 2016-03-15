@@ -26,7 +26,7 @@ feature 'a user can post a space' do
       fill_in 'Name', with: 'my hotel'
       fill_in 'Location', with: 'London'
       fill_in 'Price', with: '100'
-      attach_file "photo[image]", "spec/asset_specs/photo/Elephant.jpg"
+      attach_file "space_image", "spec/asset_specs/photo/Elephant.jpg"
       fill_in 'Details', with: 'single bedroom with ensuite'
       fill_in 'Available from', with: Date.new(2016,03,15)
       fill_in 'Available to', with: Date.new(2016,03,15)
