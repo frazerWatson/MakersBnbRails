@@ -1,6 +1,6 @@
 feature 'a user can post a space' do
   context 'no spaces have been added yet' do
-    scenario 'page has post a space link' do
+    scenario 'page has post a space link', js: true do
       visit '/'
       expect(page).to have_content 'no spaces yet...'
       expect(page).to have_link 'Post a space'
@@ -12,7 +12,7 @@ feature 'a user can post a space' do
       Space.create(name: 'my hotel')
     end
 
-    scenario 'page shows spaces' do
+    scenario 'page shows spaces', js: true do
       visit '/'
       expect(page).to have_content 'my hotel'
       expect(page).not_to have_content 'no spaces yet...'
@@ -20,13 +20,13 @@ feature 'a user can post a space' do
   end
 
   context 'users are able to add a space' do
-    scenario 'adding a space' do
+    scenario 'adding a space', js: true do
       visit '/'
       click_link 'Post a space'
       fill_in 'Name', with: 'my hotel'
       fill_in 'Location', with: 'London'
       fill_in 'Price', with: '100'
-      attach_file "Image", "spec/asset_specs/photo/Elephant.jpg"
+      attach_file "Image", Rails.root.to_s + "/spec/asset_specs/photo/Elephant.jpg"
       fill_in 'Details', with: 'single bedroom with ensuite'
       fill_in 'Available from', with: Date.new(2016,03,15)
       fill_in 'Available to', with: Date.new(2016,03,15)

@@ -1,5 +1,5 @@
 feature 'List spaces: ' do
-  scenario 'all the spaces are listed' do
+  scenario 'all the spaces are listed', js: true do
     visit '/'
     create_user
     post_a_space
@@ -9,7 +9,7 @@ feature 'List spaces: ' do
   end
   
     context 'user inputs into the search bar' do
-      scenario 'only one space is listed' do
+      scenario 'only one space is listed', js: true do
         visit '/'
         create_user
         post_a_space
