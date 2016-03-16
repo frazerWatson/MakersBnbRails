@@ -5,6 +5,7 @@
       <li>
        <p><%= space.name %></p>
        <p>Location: <%= space.location %></p>
+       <%= image_tag space.image.url(:thumb), :class => "space_thumb" %>
        <p>Details: <%= space.details %></p>
        <p>Price Per Night: <%= space.price %></p>
        <p>Available From: <%= space.available_from %></p>

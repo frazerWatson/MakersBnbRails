@@ -26,12 +26,14 @@ feature 'a user can post a space' do
       fill_in 'Name', with: 'my hotel'
       fill_in 'Location', with: 'London'
       fill_in 'Price', with: '100'
+      attach_file "Image", "spec/asset_specs/photo/Elephant.jpg"
       fill_in 'Details', with: 'single bedroom with ensuite'
       fill_in 'Available from', with: Date.new(2016,03,15)
       fill_in 'Available to', with: Date.new(2016,03,15)
       click_button 'Create Space'
       within 'ul#spaces' do
         expect(page).to have_content 'Location: London'
+        expect(page.find('.space_thumb')['src']).to have_content 'Elephant.jpg'
       end
     end
   end
