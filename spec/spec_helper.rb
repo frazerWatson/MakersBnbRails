@@ -20,7 +20,6 @@ require 'user_helper'
 # users commonly want.
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 Capybara.default_driver = :selenium
-Capybara.javascript_driver = :poltergeist
 
 RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers
@@ -34,7 +33,7 @@ RSpec.configure do |config|
       DatabaseCleaner.strategy = :deletion
     end
 
-    config.before(:each, :js => true) do
+    config.before(:each) do
       DatabaseCleaner.strategy = :truncation
     end
 
