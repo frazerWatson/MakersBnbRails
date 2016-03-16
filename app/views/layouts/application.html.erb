@@ -6,7 +6,7 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
     </head>
-    <body>
+    <body ng-controller='SpacesController'>
 
         <% if user_signed_in? %>
             <%= current_user.name %>

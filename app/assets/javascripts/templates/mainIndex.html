@@ -1,0 +1,18 @@
+<h1>Spaces </h1>
+
+ <input ng-model='query'>
+ 
+ <section ng-repeat='space in spaces | filter:query'>
+   <ul>
+     <li>
+       <h5>{{space.name}}</h5>
+       <img src="{{space.image}}">
+       <p>Location: {{space.location}}</p>
+       <p>Price: {{space.price}}</p>
+       <p>Details: {{space.details}}</p>
+       <p>Available from: {{space.available_from}}</p>
+       <p>Available to: {{space.available_to}}</p>
+     </li>
+   </ul>
+   
+ </section>
