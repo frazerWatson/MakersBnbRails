@@ -45,6 +45,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'shoulda'
+  gem 'poltergeist'
+  gem 'selenium-webdriver'
+  gem 'pry'
+  gem 'capybara-angular'
+  gem 'database_cleaner'
 end
 
 group :development do

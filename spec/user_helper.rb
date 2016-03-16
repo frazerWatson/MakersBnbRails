@@ -9,7 +9,10 @@ def create_user
 end
 
 def post_a_space(name = 'my hotel')
-  click_link 'post a space'
+  p current_url
+  visit '/'
+  p current_url
+  click_link 'Post a space'
   fill_in 'Name', with: name
   fill_in 'Location', with: 'London'
   fill_in 'Price', with: '100'

@@ -19,8 +19,34 @@ require 'user_helper'
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+Capybara.default_driver = :selenium
+Capybara.javascript_driver = :poltergeist
+
 RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers
+  config.include Capybara::Angular::DSL
+  
+  config.before(:suite) do
+      DatabaseCleaner.clean_with(:truncation)
+    end
+
+    config.before(:each) do
+      DatabaseCleaner.strategy = :deletion
+    end
+
+    config.before(:each, :js => true) do
+      DatabaseCleaner.strategy = :truncation
+    end
+
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
+  
+  
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -92,6 +118,7 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
+  
 =end
 config.after(:suite) do # or :each or :all
   Dir["#{Rails.root}/public/system/spaces/images/**/*.*"].each do |file|

@@ -3,7 +3,7 @@ feature 'a user can post a space' do
     scenario 'page has post a space link' do
       visit '/'
       expect(page).to have_content 'no spaces yet...'
-      expect(page).to have_link 'post a space'
+      expect(page).to have_link 'Post a space'
     end
   end
 
@@ -22,7 +22,7 @@ feature 'a user can post a space' do
   context 'users are able to add a space' do
     scenario 'adding a space' do
       visit '/'
-      click_link 'post a space'
+      click_link 'Post a space'
       fill_in 'Name', with: 'my hotel'
       fill_in 'Location', with: 'London'
       fill_in 'Price', with: '100'
