@@ -20,3 +20,10 @@ def post_a_space(name = 'my hotel')
   fill_in 'Available to', with: Date.new(2016,03,15)
   click_button 'Create Space'
 end
+
+def sign_in 
+  User.create(email: 'test@test.com', password: '1234abcd')
+  fill_in 'Email', with: "test@test.com"
+  fill_in 'Password', with: "1234abcd"
+  click_button "Sign In"
+end

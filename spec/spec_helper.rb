@@ -20,11 +20,11 @@ require 'user_helper'
 # users commonly want.
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+
 Capybara.default_driver = :rack_test
 
 RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers
-  config.include Capybara::Angular::DSL
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)

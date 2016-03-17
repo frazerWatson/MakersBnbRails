@@ -1,7 +1,9 @@
 class SpacesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @spaces = Space.all
-    render json: @spaces.to_json(only: [:name, :location, :details, :price, :available_from, :available_to], methods: [:image_url])
+    render json: @spaces.to_json(methods: [:image_url])
   end
 
   def new

@@ -30,6 +30,7 @@ gem 'paperclip'
 
 gem 'devise'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,9 +47,8 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda'
   gem 'selenium-webdriver'
-  gem 'pry'
-  gem 'capybara-angular'
   gem 'database_cleaner'
+  gem 'jasmine', github: 'pivotal/jasmine-gem'
 end
 
 group :development do

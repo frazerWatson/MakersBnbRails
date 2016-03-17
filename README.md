@@ -13,20 +13,24 @@ So that I can have some one stay at my place
 I'd like to post my place.
 ```
 :white_check_mark:
-```
+``
 as a user,
 so i can properly advertise my space,
 i'd like to be able to  post an image of my space,
-
+```
+:white_check_mark:
+```
 as a user,
 so I can make a better decision where to stay,
 i'd like to be able to see an image of a space,
 ```
+:white_check_mark:
 ```
 As a user
 So that I can list my place
 I want to be able to sign up.
 ```
+:white_check_mark:
 ```
 As a user
 So I can book a place to stay
