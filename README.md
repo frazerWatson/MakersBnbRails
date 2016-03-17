@@ -17,7 +17,9 @@ I'd like to post my place.
 as a user,
 so i can properly advertise my space,
 i'd like to be able to  post an image of my space,
-
+```
+:white_check_mark:
+```
 as a user,
 so I can make a better decision where to stay,
 i'd like to be able to see an image of a space,
