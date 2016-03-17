@@ -46,8 +46,6 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda'
   gem 'selenium-webdriver'
-  gem 'pry'
-  gem 'capybara-angular'
   gem 'database_cleaner'
 end
 

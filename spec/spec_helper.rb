@@ -22,7 +22,6 @@ require 'user_helper'
 
 RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers
-  config.include Capybara::Angular::DSL
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
