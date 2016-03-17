@@ -10,12 +10,17 @@ class SpacesController < ApplicationController
     @space = Space.new
   end
 
+  def individual_user
+    render json: current_user.spaces.to_json(methods: [:image_url]) 
+  end
+
+  def listings
+  end
+
   def create
-    @space = Space.create(spaces_params)
-    if @space.save
+    if @space = current_user.spaces.create(spaces_params)
       redirect_to root_path
     else
-      flash.keep[:notice] = "You must fill in all fields..."
       redirect_to new_space_path
     end
   end

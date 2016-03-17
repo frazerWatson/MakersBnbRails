@@ -1,4 +1,4 @@
-feature 'spave validations' do
+feature 'space validations' do
   context 'form needs to be correctly filled in' do
     it 'returns an error if field is blank', js: true do
       visit '/'
@@ -9,7 +9,6 @@ feature 'spave validations' do
       fill_in 'Details', with: 'testdetails'
       click_button 'Create Space'
       expect(current_path).to eq '/spaces/new'
-      expect(page).to have_content 'You must fill in all fields..'
     end
   end
 end
