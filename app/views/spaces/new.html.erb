@@ -1,24 +1,24 @@
 <%= form_for @space do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, required: true %>
 
   <%= f.label :location %>
-  <%= f.text_field :location %>
+  <%= f.text_field :location, required: true %>
 
   <%= f.label :image %>
   <%= f.file_field :image %>
 
   <%= f.label :details %>
-  <%= f.text_field :details%>
+  <%= f.text_field :details, required: true%>
 
   <%= f.label :price%>
-  <%= f.number_field :price %>
+  <%= f.number_field :price, required: true %>
 
   <%= f.label :available_from %>
-  <%= f.date_field :available_from %>
+  <%= f.date_field :available_from, required: true %>
 
   <%= f.label :available_to %>
-  <%= f.date_field :available_to %>
+  <%= f.date_field :available_to, required: true %>
 
   <%= f.submit %>
 <% end %>

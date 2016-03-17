@@ -49,6 +49,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'jasmine', github: 'pivotal/jasmine-gem'
+  gem 'rspec-collection_matchers'
 end
 
 group :development do
