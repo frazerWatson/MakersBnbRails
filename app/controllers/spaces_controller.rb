@@ -9,13 +9,14 @@ class SpacesController < ApplicationController
   end
 
   def create
-    @space = Space.create(spaces_params)
+    @user = current_user
+    @space = @user.spaces.create(spaces_params)
     redirect_to root_path
   end
 
   private
 
   def spaces_params
-    params.require(:space).permit(:name, :location, :details, :price, :available_from, :available_to, :image)
+    params.require(:space).permit(:name, :location, :details, :price, :available_from, :available_to, :image, :user_id)
   end
 end
