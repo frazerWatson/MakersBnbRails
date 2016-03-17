@@ -1,4 +1,6 @@
 class SpacesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @spaces = Space.all
     render json: @spaces.to_json(methods: [:image_url])
