@@ -15,6 +15,7 @@
 //= require angular/angular
 //= require angular-route
 //= require angular-rails-templates
+//= require angular-mocks
 //= require_tree ./templates
 //= require spaces.js
 //= require_tree .
