@@ -19,7 +19,6 @@ require 'user_helper'
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-
 RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers
 
@@ -117,10 +116,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 
 =end
-  config.after(:suite) do # or :each or :all
-    Dir["#{Rails.root}/public/system/spaces/images/**/*.*"].each do |file|
-      File.delete(file)
-    end
-  end
-
 end
