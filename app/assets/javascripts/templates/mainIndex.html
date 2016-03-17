@@ -1,0 +1,23 @@
+<h1>Spaces </h1>
+
+ <input id='search' ng-model='query'></br>
+ 
+ <section ng-if='spaces == false'>
+   <p>no spaces yet...</p>
+ </section>
+ 
+ <a ng-href='/spaces/new' id='post_space'>Post a space</a>
+ 
+ <section>
+   <ul id='spaces' ng-repeat='space in spaces | filter:query'>
+     <li>
+       <h5>{{space.name}}</h5>
+       <img class='space_thumb' ng-src={{space.image_url}}/>
+       <p>Location: {{space.location}}</p>
+       <p>Price: {{space.price}}</p>
+       <p>Details: {{space.details}}</p>
+       <p>Available from: {{space.available_from}}</p>
+       <p>Available to: {{space.available_to}}</p>
+     </li>
+   </ul>
+ </section>

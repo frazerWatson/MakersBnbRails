@@ -1,6 +1,7 @@
 class SpacesController < ApplicationController
   def index
     @spaces = Space.all
+    render json: @spaces.to_json(methods: [:image_url])
   end
 
   def new
@@ -9,7 +10,7 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.create(spaces_params)
-    redirect_to spaces_path
+    redirect_to root_path
   end
 
   private
