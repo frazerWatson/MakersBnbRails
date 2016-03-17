@@ -41,7 +41,6 @@ As a user
 So that I can see who wants to stay at my place,
 I would like to view requests on my space.
 ```
-:construction:
 ```
 As a user
 So I can post and book
