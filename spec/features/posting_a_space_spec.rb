@@ -8,19 +8,7 @@ feature 'a user can post a space' do
         expect(page).to have_link 'Post a space'
       end
     end
-
-    context 'spaces have been added' do
-      before do 
-        Space.create(name: 'my hotel')
-      end
-
-      scenario 'page shows spaces', js: true do
-        create_user
-        visit '/'
-        expect(page).to have_content 'my hotel'
-        expect(page).not_to have_content 'no spaces yet...'
-      end
-    end
+   end
 
     context 'users are able to add a space' do
       scenario 'adding a space', js: true do
@@ -41,7 +29,6 @@ feature 'a user can post a space' do
         end
       end
     end
-  end
 
   context 'User not logged in' do
     scenario 'can\'t create a space', js: true do

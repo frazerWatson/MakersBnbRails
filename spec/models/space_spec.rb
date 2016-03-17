@@ -7,4 +7,6 @@ describe Space, type: :model do
     rejecting('text/plain', 'text/xml')}
 
   it { is_expected.to belong_to(:user) }
+
+  
 end

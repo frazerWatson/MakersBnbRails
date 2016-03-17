@@ -12,7 +12,12 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.create(spaces_params)
-    redirect_to root_path
+    if @space.save
+      redirect_to root_path
+    else
+      flash.keep[:notice] = "You must fill in all fields..."
+      redirect_to new_space_path
+    end
   end
 
   private
