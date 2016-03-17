@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe Space, type: :model do
-  it {should have_attached_file(:image)}
-  it {should validate_attachment_content_type(:image).
+  it {is_expected.to have_attached_file(:image)}
+  it {is_expected.to validate_attachment_content_type(:image).
     allowing('image/png', 'image/gif').
     rejecting('text/plain', 'text/xml')}
 
