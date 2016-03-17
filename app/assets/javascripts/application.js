@@ -17,5 +17,6 @@
 //= require angular-rails-templates
 //= require_tree ./templates
 //= require spaces.js
+//= require requestsController.js
 //= require spacesController.js
 //= require_tree .
