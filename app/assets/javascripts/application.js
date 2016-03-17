@@ -18,9 +18,6 @@
 //= require angular-mocks
 //= require_tree ./templates
 //= require spaces.js
-<<<<<<< HEAD
 //= require requestsController.js
 //= require spacesController.js
-=======
->>>>>>> master
 //= require_tree .
