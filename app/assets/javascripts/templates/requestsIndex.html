@@ -1,13 +1,26 @@
 <p>Requests</p>
 
 
-<section class='requests'>
-  <ul ng-repeat='request in requests_made'>
-    <li>
-      <h5> Name of the space : {{ request.space_name }} </h5>
-      <p>  From: {{ request.from }}   </p>
-      <p>  To: {{ request.to }}     </p>
-      <p>  Status: {{ request.status }} </p>
-    </li>
-  </ul>
-</sectin>
+<section id='made'>
+    <ul ng-repeat='request in requests_made'>
+        <li>
+            <h5> Name of the space : {{ request.space_name }} </h5>
+            <p>  From: {{ request.from }}   </p>
+            <p>  To: {{ request.to }}     </p>
+            <p>  Status: {{ request.status }} </p>
+        </li>
+    </ul>
+</section>
+
+<section id='received'>
+    <h2>Requests received</h2>
+    <ul ng-repeat='spaces in requests_received'>
+        <li>
+            <h5>{{spaces.name}}</h5>
+            <p ng-if='spaces.requests.length === 0'>No requests for this property</p>
+            <li ng-repeat='request in spaces.requests'>
+                <p>{{request.status}}</p>
+                Request for: <p>{{request.from}} - {{request.to}}</p>
+            </li>
+        </ul>
+</section>

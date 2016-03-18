@@ -13,4 +13,8 @@ class Space < ActiveRecord::Base
   def image_url
     image.url(:thumb)
   end
+
+  def as_json(options = {})
+    super(options.merge(include: :requests))
+  end
 end
