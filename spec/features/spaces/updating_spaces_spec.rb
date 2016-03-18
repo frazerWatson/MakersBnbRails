@@ -8,9 +8,9 @@ feature 'updating a space' do
     visit '/'
     click_link 'My Listings'
     click_link 'Edit This Space'
-    fill_in 'name', with: 'newtestname'
-    click_link 'make changes'
-    expect(page).to have_content 'newtestname'
+    fill_in 'Name', with: 'newname'
+    click_button 'Update Space'
+    expect(page).to have_content 'newname'
     expect(page).not_to have_content 'testname'
   end
 end
