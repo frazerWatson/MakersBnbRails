@@ -1,4 +1,4 @@
-# MakersBnBRails
+# MakersBnBRails 
 
 :white_check_mark:
 ```
@@ -90,6 +90,7 @@ As a user
 So I can have guests
 I'd like to approve a booking request.
 ```
+:construction:
 ```
 As a user, 
 So that I can make a place permanently unavailable,
