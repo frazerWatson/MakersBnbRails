@@ -7,7 +7,8 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-
+      <section class='navbar'>
+        <%= link_to "HOME", root_path%>
         <% if user_signed_in? %>
             <%= current_user.name %>
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
@@ -20,6 +21,7 @@
 
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
+      </section>
         <%= yield %>
 
     </body>

@@ -1,0 +1,15 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+  background-image: image-url('background.jpg');
+  background-size: cover;
+  height: 230px;
+}
+
+.navbar {
+  text-align: center;
+  border: none;
+  width: 100%;
+}
