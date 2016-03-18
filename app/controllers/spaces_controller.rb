@@ -1,5 +1,5 @@
 class SpacesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @spaces = Space.all
@@ -23,6 +23,16 @@ class SpacesController < ApplicationController
     else
       redirect_to new_space_path
     end
+  end
+
+  def edit
+    @space = Space.find(params[:id])
+  end
+
+  def update
+    @space = Space.find(params[:id])
+    if current_user.id == @space.user_id then @space.update(spaces_params) end
+    redirect_to '/user/listings'
   end
 
   private
