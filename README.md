@@ -13,16 +13,16 @@ So that I can have some one stay at my place
 I'd like to post my place.
 ```
 :white_check_mark:
-``
-as a user,
-so i can properly advertise my space,
-i'd like to be able to  post an image of my space,
+```
+As a user,
+So i can properly advertise my space,
+I'd like to be able to  post an image of my space,
 ```
 :white_check_mark:
 ```
-as a user,
-so I can make a better decision where to stay,
-i'd like to be able to see an image of a space,
+As a user,
+So I can make a better decision where to stay,
+I'd like to be able to see an image of a space,
 ```
 :white_check_mark:
 ```
@@ -53,6 +53,7 @@ As a user
 So I can list all my places
 I'd like to be able to make multiple listings.
 ```
+:white_check_mark:
 ```
 As a user
 So I can keep track of my listings
@@ -170,7 +171,8 @@ I'd like to receive a text message alert that my booking has been declined.
 As a user
 So I can get more bookings 
 I'd like to list my space's location relevant to search criteria.
-
+```
+```
 As a user
 So I can search more effectively
 I'd like to filter spaces by distance from my chosen location.
@@ -179,7 +181,8 @@ I'd like to filter spaces by distance from my chosen location.
 As a user
 So I can communicate with the owner of the space I have booked
 I'd like to be able to message them directly.
-
+```
+```
 As a user
 So I can communicate with the person who has booked my space
 I'd like to be able to send and receive messages directly from them.
@@ -188,7 +191,8 @@ I'd like to be able to send and receive messages directly from them.
 As a user
 So I can pay easily and have a record
 I'd like to pay online
-
+```
+```
 As a user
 So I can receive payment for the use of my space
 I'd like to be paid directly into my account.
@@ -198,6 +202,3 @@ As a user
 So I can tell others about my stay
 I'd like to be able to rate the space that I stayed in.
 ```
-
-
-
