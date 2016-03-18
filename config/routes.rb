@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'account/requests' => 'account#requests'
   
   get 'account' => 'account#index'
+
+  get 'user/spaces' => 'requests#user_spaces'
   
   
   get 'spaces/:id/details' => 'spaces#details'

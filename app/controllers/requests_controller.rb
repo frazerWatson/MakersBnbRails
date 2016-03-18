@@ -18,10 +18,10 @@ class RequestsController < ApplicationController
     @request.save
     redirect_to account_requests_path
   end
+
+  def user_spaces
+    render json: current_user.spaces
+  end
   
   private
-  
-  # def requests_params
-  #   params.require(:request).permit(:from, :to)
-  # end
 end
