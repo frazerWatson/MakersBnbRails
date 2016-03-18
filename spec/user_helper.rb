@@ -1,7 +1,7 @@
-def create_user
+def create_user(name = "John Smith")
   visit '/'
   click_link "Sign Up"
-  fill_in "Name", with: "John Smith"
+  fill_in "Name", with: name
   fill_in "Email", with: "test@ymail.com"
   fill_in "Password", with: "123secret"
   fill_in "Password confirmation", with: "123secret"

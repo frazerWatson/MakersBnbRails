@@ -10,7 +10,7 @@
  
  <section>
    <ul id='spaces' ng-repeat='space in spaces | filter:query'>
-     <li>
+     <a ng-href='/spaces/{{space.id}}/details'><section id='space_link'><li>
        <h5>{{space.name}}</h5>
        <img class='space_thumb' ng-src={{space.image_url}}/>
        <p>Location: {{space.location}}</p>
@@ -18,6 +18,6 @@
        <p>Details: {{space.details}}</p>
        <p>Available from: {{space.available_from}}</p>
        <p>Available to: {{space.available_to}}</p>
-     </li>
+     </li></section></a>
    </ul>
  </section>

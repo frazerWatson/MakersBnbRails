@@ -22,13 +22,7 @@ feature 'a user can post a space' do
         expect(page).to have_content 'my hotel'
         expect(page).not_to have_content 'no spaces yet...'
       end
-      
-      scenario 'each space belongs to a user', js: true do
-        click_link 'Requests'
-        expect(page).to have_content 'my hotel'
-      end
   
-
     context 'users are able to add a space' do
       scenario 'adding a space', js: true do
         within 'ul#spaces' do

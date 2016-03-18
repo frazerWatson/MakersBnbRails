@@ -11,14 +11,24 @@ class SpacesController < ApplicationController
   end
 
   def create
+    p "CREATE PARAMS ++++++++++++++++ #{params}"
     @user = current_user
     @space = @user.spaces.create(spaces_params)
     redirect_to root_path
+  end
+  
+  def show
+    @space = Space.find(params[:id])
+    render json: @space.to_json(methods: [:image_url])
+  end
+  
+  def details
   end
 
   private
 
   def spaces_params
-    params.require(:space).permit(:name, :location, :details, :price, :available_from, :available_to, :image, :user_id)
+    params.require(:space).permit(:name, :location, :details, :price, :available_from, :available_to, :image)
   end
 end
+
