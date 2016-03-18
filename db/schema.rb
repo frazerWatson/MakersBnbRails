@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318110606) do
+ActiveRecord::Schema.define(version: 20160318151042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160318110606) do
     t.integer  "user_id"
     t.date     "from"
     t.date     "to"
+    t.string   "space_name"
   end
 
   add_index "requests", ["space_id"], name: "index_requests_on_space_id", using: :btree

@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   root 'main#index'
 
   # Example of regular route:
+  get 'account/requests' => 'account#requests'
+  
   get 'account' => 'account#index'
+  
   
   get 'spaces/:id/details' => 'spaces#details'
 

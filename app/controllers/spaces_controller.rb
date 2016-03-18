@@ -11,7 +11,6 @@ class SpacesController < ApplicationController
   end
 
   def create
-    p "CREATE PARAMS ++++++++++++++++ #{params}"
     @user = current_user
     @space = @user.spaces.create(spaces_params)
     redirect_to root_path

@@ -1,1 +1,13 @@
 <p>Requests</p>
+
+
+<section class='requests'>
+  <ul ng-repeat='request in requests_made'>
+    <li>
+      <h5> Name of the space : {{ request.space_name }} </h5>
+      <p>  From: {{ request.from }}   </p>
+      <p>  To: {{ request.to }}     </p>
+      <p>  Status: {{ request.status }} </p>
+    </li>
+  </ul>
+</sectin>
