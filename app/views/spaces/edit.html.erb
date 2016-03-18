@@ -1,0 +1,28 @@
+<% if current_user.id == @space.user_id %>
+  <%= form_for @space do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  
+    <%= f.label :location %>
+    <%= f.text_field :location, required: true %>
+  
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  
+    <%= f.label :details %>
+    <%= f.text_field :details, required: true%>
+  
+    <%= f.label :price%>
+    <%= f.number_field :price, required: true %>
+  
+    <%= f.label :available_from %>
+    <%= f.date_field :available_from, required: true %>
+  
+    <%= f.label :available_to %>
+    <%= f.date_field :available_to, required: true %>
+  
+    <%= f.submit %>
+  <% end %>
+<% else %>
+  <h1> You can only edit your own spaces!</h2>
+<% end %>

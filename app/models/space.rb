@@ -8,6 +8,7 @@ class Space < ActiveRecord::Base
     medium: '500x500>'
   }
   validates_attachment_content_type :image , :content_type => /\Aimage\/.*\Z/
+  validates :name, :location, :details, :price, :available_from, :available_to, presence: true 
   
   def image_url
     image.url(:thumb)
