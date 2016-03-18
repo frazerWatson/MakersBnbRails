@@ -17,5 +17,6 @@
 //= require angular-rails-templates
 //= require angular-mocks
 //= require spaces.js
+//= require bootstrap.min
 //= require_tree ./templates
 //= require_tree .

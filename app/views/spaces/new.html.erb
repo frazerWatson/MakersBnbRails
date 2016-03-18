@@ -1,24 +1,43 @@
-<%= form_for @space do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, required: true %>
+<header class='center-block'>
+  <h2>Post your space</h2>
+</header>
 
-  <%= f.label :location %>
-  <%= f.text_field :location, required: true %>
-
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-
-  <%= f.label :details %>
-  <%= f.text_field :details, required: true%>
-
-  <%= f.label :price%>
-  <%= f.number_field :price, required: true %>
-
-  <%= f.label :available_from %>
-  <%= f.date_field :available_from, required: true %>
-
-  <%= f.label :available_to %>
-  <%= f.date_field :available_to, required: true %>
-
-  <%= f.submit %>
-<% end %>
+<div class='center-block row bg-primary'>
+  <div class='col-lg-6 col-lg-offset-3 text-center'>
+   <div class='form group'>
+     <%= form_for @space do |f| %>
+       <div class="field">
+         <%= f.label :name %></br>
+         <%= f.text_field :name, required: true %>
+       </div>
+       <div class="field">
+         <%= f.label :location %>
+         <%= f.text_field :location, required: true %>
+       </div>
+       <div class="field">
+        <%= f.label :available_to %>
+        <%= f.date_field :available_to, required: true %>
+       </div>
+       <div class="field">
+         <%= f.label :details %>
+         <%= f.text_field :details, required: true%>
+       </div>
+       <div class="field">
+         <%= f.label :price%>
+         <%= f.number_field :price, required: true %>
+       </div>
+       <div class="field">
+         <%= f.label :available_from %>
+         <%= f.date_field :available_from, required: true %>
+       </div>
+       <div class="field">
+         <%= f.label :image %>
+         <%= f.file_field :image %>
+       </div>
+       <div class="actions">
+         <%= f.submit %>
+       </div>
+     <% end %>
+   </div>
+  </div>
+</div>
