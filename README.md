@@ -74,7 +74,7 @@ As a user
 So I can book my trip
 I'd like to see what dates places are available.
 ```
-:construction:
+:white_check_mark:
 ```
 As a user
 So I can keep my listing current
