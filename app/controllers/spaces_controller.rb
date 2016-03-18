@@ -35,6 +35,12 @@ class SpacesController < ApplicationController
     redirect_to '/user/listings'
   end
 
+  def destroy
+    space = Space.find(params[:id])
+    if current_user.id == space.user_id then space.destroy end
+    redirect_to '/user/listings'
+  end
+
   private
 
   def spaces_params
