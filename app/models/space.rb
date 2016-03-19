@@ -1,7 +1,7 @@
 class Space < ActiveRecord::Base
 
   belongs_to :user
-  has_many :requests
+  has_many :requests, dependent: :destroy
 
   has_attached_file :image, styles: {
     thumb: '250x250>',
