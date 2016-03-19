@@ -36,6 +36,7 @@ As a user
 So I can book a place to stay
 I'd like to be able to sign up.
 ```
+:white_check_mark:
 ```
 As a user
 So that I can see who wants to stay at my place,
@@ -59,16 +60,19 @@ As a user
 So I can keep track of my listings
 I'd like to be able to see all my listings.
 ```
+:white_check_mark:
 ```
 As a user
 So that I can make an informed decision
 I'd like to be able to see the details (location, price, description) of each space.
 ```
+:white_check_mark:
 ```
 As a user
 So people can book my space
 I'd like to be able to list the days it's available.
 ```
+:white_check_mark:
 ```
 As a user
 So I can book my trip
@@ -80,6 +84,7 @@ As a user
 So I can keep my listing current
 I'd like to update any changes to my listing.
 ```
+:white_check_mark:
 ```
 As a user
 So I can stay somewhere
@@ -90,7 +95,7 @@ As a user
 So I can have guests
 I'd like to approve a booking request.
 ```
-:construction:
+:white_check_mark:
 ```
 As a user, 
 So that I can make a place permanently unavailable,

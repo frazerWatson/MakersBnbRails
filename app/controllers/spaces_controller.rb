@@ -35,6 +35,14 @@ class SpacesController < ApplicationController
     redirect_to '/user/listings'
   end
 
+  def show
+    @space = Space.find(params[:id])
+    render json: @space.to_json(methods: [:image_url])
+  end
+
+  def details
+  end
+
   def destroy
     space = Space.find(params[:id])
     if current_user.id == space.user_id then space.destroy end
@@ -47,3 +55,4 @@ class SpacesController < ApplicationController
     params.require(:space).permit(:name, :location, :details, :price, :available_from, :available_to, :image)
   end
 end
+

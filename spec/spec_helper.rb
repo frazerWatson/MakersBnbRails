@@ -19,6 +19,10 @@ require 'user_helper'
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+
+Capybara.default_driver = :rack_test
+
 RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers
 
