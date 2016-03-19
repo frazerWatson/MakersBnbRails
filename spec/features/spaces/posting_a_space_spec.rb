@@ -11,17 +11,17 @@ feature 'a user can post a space' do
   end
 
   context 'spaces have been added' do
-    
+
     before do 
       create_user
       post_a_space
     end
 
-      scenario 'page shows spaces', js: true do
-        visit '/'
-        expect(page).to have_content 'my hotel'
-        expect(page).not_to have_content 'no spaces yet...'
-      end
+    scenario 'page shows spaces', js: true do
+      visit '/'
+      expect(page).to have_content 'my hotel'
+      expect(page).not_to have_content 'no spaces yet...'
+    end
 
     context 'users are able to add a space' do
       scenario 'adding a space', js: true do
@@ -32,7 +32,7 @@ feature 'a user can post a space' do
       end
     end
   end
-  
+
   context 'User not logged in' do
     scenario 'can\'t create a space', js: true do
       visit('/')

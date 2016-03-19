@@ -34,12 +34,12 @@ class SpacesController < ApplicationController
     if current_user.id == @space.user_id then @space.update(spaces_params) end
     redirect_to '/user/listings'
   end
-  
+
   def show
     @space = Space.find(params[:id])
     render json: @space.to_json(methods: [:image_url])
   end
-  
+
   def details
   end
 

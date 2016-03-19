@@ -7,36 +7,36 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-      <section class='navbar'>
-        <div class='nav_link'>
-          <%= link_to "HOME", root_path%>
-        </div>
-        <div class='nav_link'>
-          <%= link_to "Post a space", new_space_path%>
-        </div>
-        <% if user_signed_in? %>
-              <%= current_user.name %>
+        <section class='navbar'>
             <div class='nav_link'>
-              <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                <%= link_to "HOME", root_path%>
             </div>
             <div class='nav_link'>
-              <%= link_to "Requests", '/account/requests' %>
+                <%= link_to "Post a space", new_space_path%>
             </div>
-            <div class='nav_link'>
-              <%= link_to "My Listings", '/user/listings' %>
-            </div>
-        <% else %>
-            <div class='nav_link'>
-              <%= link_to "Sign In", new_user_session_path %>
-            </div>
-            <div class='nav_link'>
-              <%= link_to "Sign Up", new_user_registration_path %>
-            </div>
-        <% end %>
+            <% if user_signed_in? %>
+                <%= current_user.name %>
+                <div class='nav_link'>
+                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                </div>
+                <div class='nav_link'>
+                    <%= link_to "Requests", '/account/requests' %>
+                </div>
+                <div class='nav_link'>
+                    <%= link_to "My Listings", '/user/listings' %>
+                </div>
+            <% else %>
+                <div class='nav_link'>
+                    <%= link_to "Sign In", new_user_session_path %>
+                </div>
+                <div class='nav_link'>
+                    <%= link_to "Sign Up", new_user_registration_path %>
+                </div>
+            <% end %>
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      </section>
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+        </section>
         <%= yield %>
 
     </body>

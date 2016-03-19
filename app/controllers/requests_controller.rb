@@ -1,17 +1,16 @@
 class RequestsController < ApplicationController
-  
+
   skip_before_action :verify_authenticity_token
-  
+
   def index
   end
-  
+
   def  new 
   end
-  
+
   def create
     space = Space.find(params[:space_id])
-    @request = space.requests.new(from: params[:from],
-                                  to: params[:to],
+    @request = space.requests.new(params,
                                   user_id: current_user.id, 
                                   space_name: space.name, 
                                   status: "not confirmed")
@@ -22,6 +21,6 @@ class RequestsController < ApplicationController
   def user_spaces
     render json: current_user.spaces
   end
-  
+
   private
 end
