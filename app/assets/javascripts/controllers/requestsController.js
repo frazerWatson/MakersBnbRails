@@ -1,4 +1,4 @@
-controllers.controller('RequestsController', function($http, $scope) {
+controllers.controller('RequestsController', ['$http', '$scope', function($http, $scope) {
 
     $http.get('/account').success(function(response) {
         $scope.requests_made = response;
@@ -8,4 +8,4 @@ controllers.controller('RequestsController', function($http, $scope) {
         $scope.requests_received = response;
     })
 
-})
+}])
